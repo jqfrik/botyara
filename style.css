@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 10px;
+    background: url("assets/img/background-image.jpg") no-repeat center center / cover;
+    height: 100vh;
+}
+.blocks-heading {
+    color:white;
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.top-block {
+    width:100%;
+    display: flex;
+    margin-bottom: 20px;
+    height: 15%;
+}
+
+.statics {
+    padding-right: 10px;
+    border-right: 5px solid #aeb3b9;
+    color: white;
+    text-transform: uppercase;
+}
+.statics_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-block {
+    display: flex;
+    height: 83%;
+}
+
+.left-block {
+    flex: 1 1 0;
+    border-right: 3px solid rgba(0,0,0,0.3);
+}
+.left-block__heading {
+}
+.left-block__content {
+
+}
+
+.right-block {
+    flex: 1 1 0;
+}
+.right-block__heading {
+    margin-bottom: 5px;
+}
+.right-block__content {
+
+}
+.buttons-manage {
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons-manage button:not(:last-child) {
+    margin-right: 10px;
+}
+.buttons-manage button {
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+}
+.stop {
+}
+.stop img {
+    width: 25px;
+}
+
+.profit {
+}
+
+.log {
+}

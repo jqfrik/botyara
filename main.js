@@ -1,8 +1,13 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
-const path = require('path')
+const { app, BrowserWindow } = require('electron');
+const bet365 = require('./365bet/365bet');
+// const pinnacle = require('./pinnacle/pinnacle');
 
-function createWindow () {
+const path = require('path');
+const fs = require('fs');
+const pinnacle = require('./pinnacle/pinnacle');
+
+function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -10,11 +15,19 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
-  })
+  })  // const secondWindow = new BrowserWindow({
+  //   width: 500,
+  //   height: 300,
+  //   webPreferences: {
+  //     preload: path.join(__dirname, 'preload.js')
+  //   }
+  // })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('index.html');
 
+  // secondW.loadFile('second.html');
+  // secondWindow.loadFile('second.html')
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
@@ -23,8 +36,10 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
-  
+  createWindow();
+  bet365();
+  // pinnacle();
+  // loadSelenium();
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
@@ -8,51 +9,139 @@
     <link rel="stylesheet" href="style.css">
     <title>BOT BETS</title>
 </head>
+
 <body>
-<div class="wrapper">
-    <div class="top-block">
-        <div class="statics">
-            <div class="statics_item">
-                <div>Попыток</div>
-                <div class="attempts">0</div>
+    <div class="wrapper">
+        <div class="top-panel">
+            <div class="top-panel__left-block">
+                <div class="logo">
+                    <img src="./assets/img/bet.png" width="40" height="40" alt="">
+                    <div class="logo__text">Betting</div>
+                </div>
+                <img src="./assets/img/settings.svg" width="40" height="40" alt="">
+                <button class="btn launch-bot">Запустить бота</button>
             </div>
-            <div class="statics_item">
-                <div>Поставлено</div>
-                <div class="attempts">0</div>
+            <div class="info">
+                <img src="./assets/img/user-icon.png" width="30" height="30" alt="">
+                <div class="text">Admin</div>
             </div>
-            <div class="statics_item">
-                <div>Плюсовых</div>
-                <div class="attempts">0</div>
-            </div>
-            <div class="statics_item">
-                <div>Минусовых</div>
-                <div class="attempts">0</div>
-            </div>
-            <div class="statics_item">
-                <div>Время работа</div>
-                <div>00:00:00</div>
-            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content__left-block">
+                <div class="bk-items">
+                    <div class="bk-item">
+                        <div class="bk-item__top-panel">
+                            <div class="title">Bet365</div>
+                            <div class="status">На паузе</div>
+                        </div>
+                        <div class="bk-item__bottom-panel">
+                            <div class="first-group">
+                                <div class="balance">Баланс: 0 </div>
+                                <div class="sum">Сумма ставки:<span>0</span></div>
 
+                            </div>
+                            <div class="second-group">
+                                <div class="count">Cтавок: 0</div>
+                                <div class="attempts-count">Попыток: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bk-item">
+                        <div class="bk-item__top-panel">
+                            <div class="title">Bet365</div>
+                            <div class="status">На паузе</div>
+                        </div>
+                        <div class="bk-item__bottom-panel">
+                            <div class="first-group">
+                                <div class="balance">Баланс: 0 </div>
+                                <div class="sum">Сумма ставки:<span>0</span></div>
 
+                            </div>
+                            <div class="second-group">
+                                <div class="count">Cтавок: 0</div>
+                                <div class="attempts-count">Попыток: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bk-item">
+                        <div class="bk-item__top-panel">
+                            <div class="title">Bet365</div>
+                            <div class="status">На паузе</div>
+                        </div>
+                        <div class="bk-item__bottom-panel">
+                            <div class="first-group">
+                                <div class="balance">Баланс: 0 </div>
+                                <div class="sum">Сумма ставки:<span>0</span></div>
+
+                            </div>
+                            <div class="second-group">
+                                <div class="count">Cтавок: 0</div>
+                                <div class="attempts-count">Попыток: 0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="heading">Информация о текущей вилке</h1>
+                <table id="table">
+                    <thead>
+                        <th>БК</th>
+                        <th>СПОРТ</th>
+                        <th>Ставка</th>
+                        <th>Событие</th>
+                        <th>Счёт</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="main-content-right-block">
+                <div class="log-panel">
+                    <h3>Логи</h3>
+                    <div class="logs">
+                    </div>
+                </div>
+                <div class="statistic">
+                    <h3 class="statistic__heading">Статистика</h3>
+                    <div class="time">
+                        <div class="time__text">Время работы</div>
+                        <div class="time__num">00:00:00</div>
+                    </div>
+                    <div class="fork">
+                        <div class="fork__text">Вилок получено с сервера</div>
+                        <div class="fork__num">0</div>
+                    </div>
+                    <div class="cancel-filter">
+                        <div class="cancel-filter__text">Отменено фильтрами</div>
+                        <div class="cancel-filter__num">0</div>
+                    </div>
+                    <div class="cancel-repeater">
+                        <div class="cancel-repeater__text">Отменено повторных</div>
+                        <div class="cancel-repeater__num">0</div>
+                    </div>
+                    <div class="loaded">
+                        <div class="loaded__text">Было загружено</div>
+                        <div class="loaded__number">0</div>
+                    </div>
+                    <div class="fork-disappeared">
+                        <div class="fork-disappeared__text">Ставка пропала до загрузки</div>
+                        <div class="fork-disappeared__num">0</div>
+                    </div>
+                    <div class="not-overlapped">
+                        <div class="not-overlapped__text">Не перекрытых</div>
+                        <div class="not-overlapped__num">0</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="bottom-block">
-        <div class="left-block">
-            <div class="blocks-heading left-block__heading ">информация</div>
-            <div class="left-block__content">content</div>
-        </div>
-        <div class="right-block">
-            <div class="blocks-heading right-block__heading">profit</div>
-            <div class="right-block__content">
-              <div class="buttons-manage">
-                <button class="settings"><img src="./assets/img/settings.svg" alt="settings"></button>
-                <button class="start"><img src="./assets/img/start.svg" alt="start"></button>
-                <button class="stop"><img src="./assets/img/stop.png" alt="stop"></button>
-              </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="./renderer.js"></script>
+    <script src="./renderer.js"></script>
 </body>
+
 </html>
